@@ -23,7 +23,7 @@ import { FullComponent } from './layouts/full/full.component';
 import { SidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import { HeaderComponent } from './layouts/full/header/header.component';
 import { BrandingComponent } from './layouts/full/sidebar/branding.component';
-//import { AppNavItemComponent } from './layouts/full/sidebar/nav-item/nav-item.component';
+import { AppNavItemComponent } from './layouts/full/sidebar/nav-item/nav-item.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { BrandingComponent } from './layouts/full/sidebar/branding.component';
     HeaderComponent,
     SidebarComponent,
     BrandingComponent,
-    //AppNavItemComponent,
+    AppNavItemComponent,
   ],
   imports: [
     BrowserModule,
