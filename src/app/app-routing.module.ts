@@ -22,7 +22,7 @@ const routes: Routes = [
         path: 'ui-components',
         loadChildren: () =>
           import('./pages/ui-components/ui-components.module').then(
-            (m) => m.UiComponentsModule
+            (m) => m.UicomponentsModule
           ),
       },
       {

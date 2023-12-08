@@ -1,23 +1,39 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { BadgeComponent } from './badge/badge.component';
-import { ChipsComponent } from './chips/chips.component';
-import { ListsComponent } from './lists/lists.component';
-import { MenuComponent } from './menu/menu.component';
-import { TooltipsComponent } from './tooltips/tooltips.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../../material.module';
 
+// icons
+import { TablerIconsModule } from 'angular-tabler-icons';
+import * as TablerIcons from 'angular-tabler-icons/icons';
 
+import { UiComponentsRoutes } from './ui-components.routing';
+
+// ui components
+import { AppBadgeComponent } from './badge/badge.component';
+import { AppChipsComponent } from './chips/chips.component';
+import { AppListsComponent } from './lists/lists.component';
+import { AppMenuComponent } from './menu/menu.component';
+import { AppTooltipsComponent } from './tooltips/tooltips.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
-  declarations: [
-    BadgeComponent,
-    ChipsComponent,
-    ListsComponent,
-    MenuComponent,
-    TooltipsComponent
-  ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    RouterModule.forChild(UiComponentsRoutes),
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TablerIconsModule.pick(TablerIcons),
+    MatNativeDateModule,
+  ],
+  declarations: [
+    AppBadgeComponent,
+    AppChipsComponent,
+    AppListsComponent,
+    AppMenuComponent,
+    AppTooltipsComponent,
+  ],
 })
-export class UiComponentsModule { }
+export class UicomponentsModule {}
